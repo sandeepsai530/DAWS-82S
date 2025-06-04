@@ -1,0 +1,69 @@
+cat > devops.txt -> this will add content
+cat >> devops.txt -> this will keep the existing data and new data
+uname -> system name
+
+CURL vs WGET:
+wget <url> -> downloads the files
+curl <url> -> shows the content on the screen
+curl <url> -o <path> -> downloads the file with name given
+
+grep -> search word in a file -usage -> grep <word to search> <filename>
+ex: grep ec2-user passwd
+cat <filename> | grep <word to search> <filename>
+ex: cat passwd | grep ec2-user passwd
+
+cut:
+awk:
+head
+tail
+find
+
+useradd ramesh
+id ramesh
+passwd ramesh
+usermod -g devops ramesh
+groupadd testing
+usermod -aG testing ramesh
+userdel ramesh
+vim /etc/ssh/sshd_config
+systemctl restart sshd
+sshd -t
+cat /etc/passwd
+cat /etc/group
+chown <username>:<groupname> <filename>
+chown -R suresh:suresh .ssh
+chmod 777 <filename>
+777 -> RWX
+
+Network Management:
+-------------------
+netstat -lntp -> check port is open or not
+ps -ef | grep nginx
+systemctl status nginx
+systemctl restart nginx
+systemctl enable nginx
+
+forward proxy vs reverse proxy:
+-------------------------------
+
+
+Nginx home directory: /etc/nginx
+html directory: /usr/share/nginx/html
+nginx configuration: /etc/nginx/nginx.conf
+
+what is inode,symlink/softlink,hardlink?
+ls -li
+stat <filename>
+ln -s <filename> <newfile> --> create symlink
+ln -s hello.txt hi.txt
+symlink is like shortcut, it points to the original file. 
+symlink inode and actual file inode is different.
+symlink breaks when actual file is deleted.
+symlink can be created to folders/ directories.
+
+hardlink inode is same as actual file.
+hardlink is useful for backup of the file.
+if original file is delete hardlink remains same.
+we cant create hardlink to folders/directories.
+ln <filename> <newfile> --> create hardlink
+find / -inum <number> -> this will display the files with same inode
