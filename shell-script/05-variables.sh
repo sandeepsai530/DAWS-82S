@@ -7,4 +7,4 @@ read -s USERNAME #by writing -s , username will not be displayed while writing o
 echo "you entered username as : $USERNAME"
 
 echo "please enter password:"
-read -s PASSWORD
+read -s PASSWORD #password will not be displayed on console
