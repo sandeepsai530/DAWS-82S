@@ -2,6 +2,6 @@
 
 echo "please enter username:"
 
-#read USERNAME
-read -s USERNAME
+#read USERNAME #username will be displayed on console while writing
+read -s USERNAME #by writing -s , username will not be displayed while writing on console
 echo "you entered username as : $USERNAME"
