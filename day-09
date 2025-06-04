@@ -1,0 +1,46 @@
+HTTP methods and status codes:
+CRUD operations - Create,Read,Update and Delete
+
+GET -> getting/read from server
+POST -> posting/create the information
+{
+  amount: "200"
+  desc: "travel"
+}
+PUT -> update the information
+DELETE -> delete the information
+
+status codes:
+100 - 1XX - informational codes
+200 - 2XX - success status codes
+300 - 3XX - redirectional codes like frontend connecting backend 
+400 - 4XX - client side error
+500 - 5XX - server side error
+
+Few common errors we see:
+403 - Forbidden -> you dont have access to that
+401 - Unauthorized -> you shouldn't login
+405 - HTTP POST, if you use GET -> method not allowed
+400 - bad request -> check the payload data once again
+
+500 - Internal server error - server side error
+502 - bad gateway - frontend not able to connect backend
+503 - service temporarily unavailable
+
+Logs:
+logs will be stored in cd /var/log
+**tail -f messages** - we can see running logs - interview question , how do you check running logs
+
+Memory commands:
+free -h
+htop
+cat /proc/meminfo - memory information
+
+cat /proc/cpuinfo - cpu infomation
+
+How do you list top 10 high memory consuming processes?
+ps aux --sort -%mem|head -n 10
+Disk usage?
+df -hT
+du -sh /* -> gives the disk usage of files and folders in root directory.
+
