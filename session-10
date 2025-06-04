@@ -1,0 +1,4 @@
+GIT:
+Staging(VS code) -> local repo(Computer) ->Remote Repo(GitHub)
+
+If others want to use the same repo, they can clone it to their local.
