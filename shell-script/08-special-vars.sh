@@ -1,0 +1,10 @@
+#!/bin/bash
+
+All variables passed: $@
+number of varibales passed: $#
+script name: $0
+present working directory: $PWD
+Home directory of current user: $HOME 
+which user is running this script: $USER 
+process id of current script: $$
+process id of last command running in background: $!
