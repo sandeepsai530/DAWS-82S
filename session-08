@@ -1,0 +1,34 @@
+what is inode,symlink and hardlink?
+inode (index node) is a data structure used by Linux and Unix-like file systems to store metadata about a file or directory. 
+Important: the inode does not store the filename - file names are stored separetly in directory entries that point to the inode.
+stat <filename>
+
+command to view the inode number of files:
+ls -li
+output: 123456 -rw-r--r-- 1 user group 0 jun 5 12:00 file.txt
+Here 123456 is inode number
+
+Find file by inode
+find . -inum 123456
+find / -inum <number> -> this will display the files with same inode
+
+Why are inodes important?
+- They track everything about a file except its name.
+- Every file (and directory) has an inode.
+- you can run out of inodes before you run out of dick space, especially if you create tons of small files.
+
+Soft link(symbolic link)?
+- symlink is like shortcut, it points to the original file. 
+- symlink inode and actual file inode is different.
+- symlink breaks when actual file is deleted.
+- symlink can be created to folders/ directories.
+Command to create softlink: ln -s <filename> <newfile>
+ln -s hello.txt hi.txt
+
+Hardlink?
+- hardlink inode is same as actual file.
+- hardlink is useful for backup of the file.
+- if original file is delete hardlink remains same.
+- we cant create hardlink to folders/directories.
+command to create hardlink of a file: ln <filename> <newfile>
+ln hello.txt hi.txt
