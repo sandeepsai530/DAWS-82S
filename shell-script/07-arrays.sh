@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MOVIES=("Apple","Beetroot","Carrot")
+MOVIES=("Apple" "Beetroot" "Carrot")
 
 echo "First movie name: ${MOVIES[$0]}"
 echo "Second movie name: ${MOVIES[$1]}"
