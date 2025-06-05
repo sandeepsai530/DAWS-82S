@@ -22,3 +22,18 @@ then #not installed
 else
     echo "MYSQL is already ..INSTALLED"
 fi
+
+dnf list installed git
+if [ $? -ne 0 ]
+then
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing GIT...FAILURE"
+        exit 1
+    else
+        echo "Installing GIT...SUCCESS"
+    fi
+else
+    echo "GIT is already....INSTALLED"
+fi
