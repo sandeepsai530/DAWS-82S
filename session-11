@@ -1,4 +1,4 @@
-Special variables
+Special variables:
 -----------------
 $1, $2, $3
 
@@ -10,3 +10,6 @@ Home directory of current user: $HOME
 which user is running this script: $USER 
 process id of current script: $$
 process id of last command running in background: $!
+
+Conditions:
+-----------
