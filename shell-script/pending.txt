@@ -50,20 +50,3 @@ forward proxy vs reverse proxy:
 Nginx home directory: /etc/nginx
 html directory: /usr/share/nginx/html
 nginx configuration: /etc/nginx/nginx.conf
-
-what is inode,symlink/softlink,hardlink?
-ls -li
-stat <filename>
-ln -s <filename> <newfile> --> create symlink
-ln -s hello.txt hi.txt
-symlink is like shortcut, it points to the original file. 
-symlink inode and actual file inode is different.
-symlink breaks when actual file is deleted.
-symlink can be created to folders/ directories.
-
-hardlink inode is same as actual file.
-hardlink is useful for backup of the file.
-if original file is delete hardlink remains same.
-we cant create hardlink to folders/directories.
-ln <filename> <newfile> --> create hardlink
-find / -inum <number> -> this will display the files with same inode
