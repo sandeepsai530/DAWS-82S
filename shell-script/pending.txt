@@ -50,3 +50,9 @@ forward proxy vs reverse proxy:
 Nginx home directory: /etc/nginx
 html directory: /usr/share/nginx/html
 nginx configuration: /etc/nginx/nginx.conf
+
+Variables
+datatypes
+conditions
+functions
+loops
