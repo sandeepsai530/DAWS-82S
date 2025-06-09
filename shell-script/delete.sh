@@ -8,11 +8,11 @@ then
     exit 1
 fi
 
-echo "please install mysql packages if not installed already"
+echo "please install $@ packages if not installed already"
 
-dnf list installed mysql
+dnf list installed $@
 if [ $? -ne 0 ]
 then
-    dnf install mysql -y
-    echo "package MYSQL installed"
+    dnf install $@ -y
+    echo "package $@ installed"
 fi
