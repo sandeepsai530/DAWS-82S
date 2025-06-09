@@ -6,7 +6,7 @@
  #    exit 1
  #fi
  parameter=$1
- if [ $parameter -ne 0 ]
+ if [ "$parameter" -ne 0 ]
  then
     echo "please provide software names"
     exit 1
