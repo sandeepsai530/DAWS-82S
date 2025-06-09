@@ -44,7 +44,7 @@ VALIDATE $? "Starting MySQL server"
 
 mysql -h saisandeep-devops.xyz -u root -pExpenseApp@1 -e 'show databases'
 
-if [$? -ne 0 ]
+if [ $? -ne 0 ]
 then   
     echo "MySQL root passowrd not setup" &>>$LOG_FILE_NAME
     mysql_secure_installation --set-root-pass ExpenseApp@1
