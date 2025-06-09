@@ -1,10 +1,11 @@
 #!/bin/bash
 
- if [ $1 -ne 0 ]
- then    
-     echo "please provide software names that to be installed"
-     exit 1
- fi
+ #if [ $1 -ne 0 ]
+ #then    
+ #    echo "please provide software names that to be installed"
+ #    exit 1
+ #fi
+echo " $1"
 
 USERID=$(id -u)
 R="\e[31m"
