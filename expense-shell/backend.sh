@@ -61,7 +61,7 @@ cd /app
 npm install
 VALIDATE $? "installing dependencies"
 
-cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service
+cp /home/ec2-user/DAWS-82S/expense-shell/backend.service /etc/systemd/system/backend.service
 
 #prepare MYSQL schema
 dnf install mysql -y &>>$LOG_FILE_NAME
