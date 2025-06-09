@@ -42,8 +42,8 @@ do
     if [ $? -ne 0 ]
     then #not installed
         dnf install mysql -y &>>$LOG_FILE_NAME
-        VALIDATE $? "Installing MySQL"
+        VALIDATE $? "Installing $package"
     else
-        echo -e "MySQL is already ... $Y INSTALLED"
+        echo -e "$package is already ... $Y INSTALLED"
     fi
 done
