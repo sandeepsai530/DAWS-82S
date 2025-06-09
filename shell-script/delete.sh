@@ -13,6 +13,6 @@ echo "please install mysql packages if not installed already"
 dnf list installed mysql
 if [ $? -ne 0 ]
 then
-    dnf install mysql
+    dnf install mysql -y
     echo "package MYSQL installed"
 fi
