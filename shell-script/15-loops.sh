@@ -33,3 +33,4 @@ do
     else
         echo -e "MySQL is already ... $Y INSTALLED"
     fi
+done
