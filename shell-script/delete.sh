@@ -11,3 +11,8 @@ fi
 echo "please install $@ packages if not installed already"
 
 dnf list installed $@
+if [ $@ -ne 0 ]
+then
+    dnf install $@
+    echo "package $@ installed"
+fi
