@@ -51,13 +51,14 @@ else
     echo "expense user already exists.. SKIPPING"
 fi
 
-mkdir -p /app
+mkdir -p /app 
 VALIDATE $? "creating app directory"
 
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
 VALIDATE $? "downloading application code"
 
 cd /app
+rm -rf /app/*
 
 unzip /tmp/backend.zip
 VALIDATE $? "unzip the backend file"
