@@ -17,6 +17,7 @@ do
     if [ $? -ne 0 ]
     then
         dnf install $@ -y
+        exit 1
     else
         echo "please enter valid package name"
     fi
