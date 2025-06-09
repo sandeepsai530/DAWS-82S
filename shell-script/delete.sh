@@ -14,5 +14,10 @@ dnf list installed $@
 if [ $? -ne 0 ]
 then
     dnf install $@ -y
-    echo "package $@ installed"
+    if [ $? -eq 0]
+    then
+        echo "package $@ installed"
+    else
+        echo "package name is not correct"
+    fi
 fi
