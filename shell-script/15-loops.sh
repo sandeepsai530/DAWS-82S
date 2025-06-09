@@ -3,7 +3,7 @@
 if [ $1 -eq 0 ]
 then    
     echo "please provide software names that to be installed"
-    exit 1;
+    exit 1
 fi
 
 USERID=$(id -u)
