@@ -5,7 +5,12 @@
  #    echo "please provide software names that to be installed"
  #    exit 1
  #fi
-echo " $1"
+ parameter=$1
+ if [ $parameter -ne 0 ]
+ then
+    echo "please provide software names"
+    exit 1
+fi
 
 USERID=$(id -u)
 R="\e[31m"
