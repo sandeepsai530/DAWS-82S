@@ -18,6 +18,6 @@ then
     then
         echo "package $@ installed"
     else
-        echo "package name is not correct"
+        echo "please enter valid package name"
     fi
 fi
