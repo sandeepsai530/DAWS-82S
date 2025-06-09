@@ -9,3 +9,11 @@ then
 fi
 
 dnf list installed mysql
+
+if [ $? -ne 0 ]
+then
+    echo "MySQL is installing"
+    dnf install mysql -y
+else
+    echo "MySQL is already installed"
+fi
