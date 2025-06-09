@@ -8,4 +8,6 @@ then
     exit 1
 fi
 
-echo "please install $@ packages"
+echo "please install $@ packages if not installed already"
+
+dnf list installed $@
