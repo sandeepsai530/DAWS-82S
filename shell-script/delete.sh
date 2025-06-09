@@ -14,7 +14,7 @@ VALIDATE(){
         echo "$2 ... NOT A VALID PACKAGE"
         exit 1
     else
-        echo "$2 ... $G SUCCESS"
+        echo "$2 ... SUCCESS"
     fi
 }
 
