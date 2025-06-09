@@ -5,6 +5,13 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 
+LOGS_FOLDER="/var/log/shellscript-logs"
+LOG_FILE=$(echo $0 | cut -d "." -f1 )
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
+
+echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then   
@@ -25,10 +32,10 @@ CHECK_ROOT(){
 
 for package in $@
 do
-    dnf list installed $package
+    dnf list installed $package &>>$LOG_FILE_NAME
     if [ $? -ne 0 ]
     then #not installed
-        dnf install mysql -y
+        dnf install mysql -y &>>$LOG_FILE_NAME
         VALIDATE $? "Installing MySQL"
     else
         echo -e "MySQL is already ... $Y INSTALLED"
