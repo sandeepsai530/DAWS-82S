@@ -29,3 +29,6 @@ do
         echo "package already installed"
     fi
 done
+
+dnf install hu -y
+echo "$1"
