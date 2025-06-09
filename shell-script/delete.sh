@@ -14,7 +14,7 @@ dnf list installed $@
 if [ $? -ne 0 ]
 then
     dnf install $@ -y
-    if [ $? -eq 0]
+    if [ $? -eq 0 ]
     then
         echo "package $@ installed"
     else
