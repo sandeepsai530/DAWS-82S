@@ -10,14 +10,14 @@ fi
 
 echo "please install $@ packages if not installed already"
 
-dnf list installed $@
-if [ $? -ne 0 ]
-then
-    dnf install $@ -y
-    if [ $? -eq 0 ]
+
+for package in $@
+do
+    dnf list installed $package
+    if [ $? -ne 0 ]
     then
-        echo "package $@ installed"
+        dnf install $@ -y
     else
         echo "please enter valid package name"
     fi
-fi
+done
