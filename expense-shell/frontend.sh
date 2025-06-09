@@ -56,5 +56,8 @@ VALIDATE $? "extracting the code"
 unzip /tmp/frontend.zip &>>$LOG_FILE_NAME
 VALIDATE $? "unzip the frontend code"
 
+
+cp /home/ec2-user/DAWS-82S/expense-shell/expense.conf /etc/nginx/default.d/expense.conf
+
 systemctl restart nginx &>>$LOG_FILE_NAME
 VALIDATE $? "restarting nginx"
