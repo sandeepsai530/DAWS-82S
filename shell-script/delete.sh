@@ -8,9 +8,4 @@ then
     exit 1
 fi
 
-dnf list installed $@
-if [ $@ -ne 0 ]
-then
-    echo "please provide software names"
-    exit 1
-fi
+dnf list installed $1
