@@ -8,4 +8,4 @@ then
     exit 1;
 fi
 
-dnf list installed
+dnf list installed mysql
