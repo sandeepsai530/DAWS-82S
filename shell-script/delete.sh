@@ -1,6 +1,8 @@
 #!/bin/bash
 
 USERID=$(id -u)
+package=$@
+echo "$package"
 
 if [ $USERID -ne 0 ]
 then   
@@ -8,4 +10,4 @@ then
     exit 1
 fi
 
-dnf list installed $1
+
