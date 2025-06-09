@@ -8,17 +8,13 @@ then
     exit 1
 fi
 
-echo "please install $@ packages if not installed already"
-
-
 for package in $@
 do
     dnf list installed $package
     if [ $? -ne 0 ]
     then
-        dnf install $@ -y
-        exit 1;
+        dnf install $package -y
     else
-        echo "please enter valid package name"
+        echo "package already installed"
     fi
 done
