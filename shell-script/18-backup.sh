@@ -26,13 +26,13 @@ then
     USAGE
 fi
 
-if [ ! -d $SOURCE_DIR ]
+if [ ! -d "$SOURCE_DIR" ]
 then
     echo "$SOURCE_DIR does not exist..please check"
     exit 1
 fi
 
-if [ ! -d $DEST_DIR ]
+if [ ! -d "$DEST_DIR" ]
 then
     echo "$DEST_DIR does not exist..please check"
     exit 1
@@ -42,7 +42,7 @@ echo "script started executing from: $TIMESTAMP"
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [ -n $FILES ] #true files exists
+if [ -n "$FILES" ] #true files exists
 then
     echo "Files are: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
