@@ -57,7 +57,7 @@ then
             echo "deleted file: $filepath"
         done <<< $FILES
     else
-        echo "$R Error: $N failed to create zip file"
+        echo -e "$R Error: $N failed to create zip file"
         exit 1
     fi
 else
